@@ -1,0 +1,130 @@
+.nav-bar {
+  z-index: 999;
+  position: fixed;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-bar .options {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #000;
+  padding: 1.2rem 1rem;
+  border-radius: 1rem;
+}
+
+.nav-bar .options li {
+  padding: 0.5rem 0.8em;
+  border-radius: 0.2rem;
+  transition: all ease-in-out 0.2s;
+}
+
+.nav-bar .options li:hover {
+  background-color: #701cda;
+}
+
+.nav-bar .previous-next {
+  margin-top: 2rem;
+  background-color: #000;
+  border-radius: 1rem;
+  padding: 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav-bar .previous-next li {
+  padding: 0.5rem 0.8em;
+  border-radius: 0.2rem;
+  text-align: center;
+  transition: all ease-in-out 0.2s;
+}
+
+.nav-bar .previous-next li:hover {
+  background-color: #701cda;
+}
+
+.nav-bar .options li {
+  display: flex;
+  justify-content: center;
+}
+
+/* RESPONSIVE */
+.nav-bar.mobile {
+  top: 5%;
+  transform: initial;
+}
+
+.nav-bar.mobile .menu-button {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  width: 75px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.nav-bar.mobile .menu-button .line {
+  transition: all ease-in-out 0.3s;
+}
+
+/* CLOSE */
+
+.nav-bar.mobile:has(.open) .menu-button {
+  position: relative;
+}
+
+.nav-bar.mobile:has(.open) .menu-button li:nth-child(1) {
+  transform: translate(0px, 13px) rotate(45deg);
+}
+.nav-bar.mobile:has(.open) .menu-button li:nth-child(2) {
+  transform: translate(0px, 0px) rotate(-45deg);
+}
+.nav-bar.mobile:has(.open) .menu-button li:nth-child(3) {
+  width: 0px;
+}
+/* CLOSE */
+
+.nav-bar.mobile .menu-button li {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #fff;
+}
+
+.nav-bar.mobile .nav-bar-wrapper {
+  position: relative;
+}
+
+.nav-bar.mobile .menu {
+  position: absolute;
+  right: -200%;
+  transition: all ease-in-out 0.2s;
+}
+
+.nav-bar.mobile .menu.open {
+  position: absolute;
+  right: 0%;
+}
+
+/* .nav-bar.mobile .menu-button:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  background-color: red;
+}
+
+.nav-bar.mobile .menu-button:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 90%;
+  height: 0.2rem;
+  background-color: red;
+} */
+/* RESPONSIVE */

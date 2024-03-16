@@ -1,0 +1,117 @@
+/* ABOUT ME */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 4rem 0;
+}
+
+.about .programming-image img {
+  height: 400px;
+}
+
+.about .skills {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about .skills p {
+  font-size: 1.1rem;
+}
+
+.about .skills ul {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.about .skills ul li {
+  border: #701cda solid 1px;
+  border-radius: 0.4rem;
+  padding: 0.3rem 0.6rem;
+}
+
+.about .skills .download-cv {
+  background-color: #701cda;
+  align-self: start;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.services {
+  margin-top: 5rem;
+  grid-column: 1 / -1;
+}
+
+.services h1 {
+  text-align: center;
+}
+
+.services .services-items {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.services .services-items .service-item {
+  background-color: #202026;
+  padding: 2rem;
+  border-radius: 0.4rem;
+  transition: ease-in-out 0.3s all;
+}
+
+.services .services-items .service-item:hover {
+  box-shadow: -0.1rem 0 2rem #000000;
+}
+
+.services .services-items .service-item.web svg {
+  color: #9774fa;
+}
+
+.services .services-items .service-item.mobile svg {
+  color: #2796e2;
+}
+
+.services .services-items .service-item.database svg {
+  color: #ed7256;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1280px) {
+  .about .programming-image img {
+    height: 300px;
+  }
+  .about {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about .programming-image img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 867px) {
+  .about {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .services .services-items {
+    grid-template-columns: 1fr 1fr;
+  }
+  .services .service-item.database {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 667px) {
+  .services .services-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* RESPONSIVE */

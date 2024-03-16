@@ -1,0 +1,94 @@
+.contact {
+  margin: 4rem 0;
+}
+
+.contact h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact .communication {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: center;
+  gap: 4rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.contact .communication div {
+  background-color: #202026;
+  padding: 1rem;
+  width: 100%;
+  transition: all ease-in-out 0.3s;
+  border-radius: 0.4rem;
+}
+
+.contact .communication div:hover {
+  box-shadow: -0.1rem 0 2rem #000000;
+}
+
+.contact .communication svg {
+  font-size: 1.3rem;
+  background: transparent;
+  padding: 3rem;
+  border: 2px solid #9774fa;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.contact .communication h2 {
+  margin-bottom: 1rem;
+}
+
+.contact .report {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact .report .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact .report .form .full-name {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact .report .form input {
+  width: 100%;
+}
+
+.contact .report .map > div > div {
+  border-radius: 0.4rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .contact .communication {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 867px) {
+  .contact .communication {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact .communication div:last-child {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 598px) {
+  .contact .communication {
+    grid-template-columns: 1fr;
+  }
+
+  .contact .report {
+    grid-template-columns: 1fr;
+  }
+}
+/* RESPONSIVE */
