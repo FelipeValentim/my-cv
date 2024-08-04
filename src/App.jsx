@@ -1,17 +1,15 @@
-import NavBar from "./NavBar";
 import "./App.css";
-import About from "./About";
-import Home from "./Home";
-import Experience from "./Experience";
-import Contact from "./Contact";
+import "./Common.css";
 import { useLottie } from "lottie-react";
 import loading from "./loading.json";
 import React from "react";
 import { SnackBar } from "./SnackBar";
+import Header from "./components/Header";
+import BackgroundAnimation from "./components/BackgroundAnimation";
+import Home from "./components/Home";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
-  const [page, setPage] = React.useState(1);
 
   const Loading = () => {
     const options = {
@@ -38,26 +36,23 @@ function App() {
   }, []);
 
   return (
-    <div className="main-container">
+    <>
       {isLoading ? (
         <Loading />
       ) : (
-        <div className="fade">
-          {/* <NavBar setPage={setPage} page={page} />
-          {page == 1 && <Home />}
-          {page == 2 && <About />}
+        <>
+          <BackgroundAnimation />
 
-          {page == 3 && <Experience />}
-          {page == 4 && <Contact />} */}
-          <NavBar isMobile={isMobile} setPage={setPage} page={page} />
-          {page == 1 && <Home />}
-          {page == 2 && <About />}
-          {page == 3 && <Experience />}
-          {page == 4 && <Contact />}
-          <SnackBar />
-        </div>
+          <div className="main-container">
+            <div className="fade">
+              <Header />
+              <Home />
+              <SnackBar />
+            </div>
+          </div>
+        </>
       )}
-    </div>
+    </>
   );
 }
 

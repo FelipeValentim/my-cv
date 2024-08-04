@@ -1,0 +1,71 @@
+/* NAME TAG */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: var(--white-color);
+}
+
+.tag {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 0fr auto;
+  transition: all ease-in-out 0.3s;
+  gap: 0.1rem;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.tag:hover {
+  grid-template-columns: auto 1fr auto;
+}
+
+.tag .name-tag {
+  font-size: 1rem;
+  overflow: hidden;
+  text-wrap: nowrap;
+  color: #f5f7f8;
+  font-weight: bold;
+}
+
+.tag :is(.open-tag, .close-tag) {
+  height: 35px;
+}
+
+.tag .close-tag {
+  transition: all ease-in-out 0.3s;
+}
+/* NAME TAG */
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation span {
+  cursor: pointer;
+  padding: 0.5rem;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navigation span:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #f5f7f8;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  transition: ease-in-out all 0.2s;
+}
+
+.navigation span:hover:before {
+  width: 100%;
+}
