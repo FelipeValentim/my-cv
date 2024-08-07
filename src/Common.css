@@ -79,6 +79,10 @@
   animation: blink 0.7s infinite;
 }
 
+.grow {
+  animation: grow 0.6s ease-out forwards;
+}
+
 @keyframes blink {
   0%,
   100% {
@@ -86,5 +90,14 @@
   }
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }

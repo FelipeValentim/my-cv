@@ -13,16 +13,22 @@ const BackgroundAnimation = () => {
     const particlesArray = [];
     const numberOfParticles = 200;
     const maxDistance = 100;
-    const speedMultiplier = 0.5; //\ Velocidade das partículas
+    const speedMultiplier = 0.5; // Velocidade das partículas
     const fillStyle = "rgba(245, 247, 248, 0.1)";
     const strokeStyle = "rgba(245, 247, 248, 0.1)";
     const lineWidth = 1;
+    const mouse = {
+      x: null,
+      y: null,
+    };
 
     class Particle {
       constructor(x, y) {
         this.x = x;
         this.y = y;
         this.size = Math.random() * 5 + 1;
+        this.baseX = this.x;
+        this.baseY = this.y;
         this.speedX = (Math.random() * 1 - 0.5) * speedMultiplier;
         this.speedY = (Math.random() * 1 - 0.5) * speedMultiplier;
       }
@@ -36,6 +42,16 @@ const BackgroundAnimation = () => {
         }
         if (this.y > canvas.height || this.y < 0) {
           this.speedY *= -1;
+        }
+
+        // Move slightly away from the mouse position
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < 100) {
+          const angle = Math.atan2(dy, dx);
+          this.x -= Math.cos(angle) * 2;
+          this.y -= Math.sin(angle) * 2;
         }
       }
 
@@ -94,6 +110,11 @@ const BackgroundAnimation = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       init();
+    });
+
+    window.addEventListener("mousemove", (event) => {
+      mouse.x = event.x;
+      mouse.y = event.y;
     });
   }, []);
 

@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import "./Home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faInstagram,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Typewriter = ({ text, speed = 75, onComplete, last = false }) => {
   const [displayedText, setDisplayedText] = useState("");
@@ -96,18 +100,46 @@ const Home = () => {
             />
           )}
           <span className="color-primary">
-            {writerIndex >= 8 && <Typewriter text={".NET Core"} last />}
+            {writerIndex >= 8 && (
+              <Typewriter
+                text={".NET Core"}
+                last
+                onComplete={() => setWriterIndex(9)}
+              />
+            )}
           </span>
         </span>
         <span className="social-media" title="Currículo">
-          <span className="btn btn-primary">Baixar CV</span>
-          <span className="btn btn-secondary" title="LinkedIn">
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </span>
-          <span className="btn btn-secondary" title="GitHub">
-            <FontAwesomeIcon icon={faGithub} />
-          </span>
+          {writerIndex >= 9 && (
+            <>
+              <span className="btn btn-primary grow">Baixar CV</span>
+              <span className="btn btn-secondary grow" title="LinkedIn">
+                <FontAwesomeIcon icon={faLinkedinIn} />
+              </span>
+              <span className="btn btn-secondary grow" title="GitHub">
+                <FontAwesomeIcon icon={faGithub} />
+              </span>
+            </>
+          )}
         </span>
+      </div>
+      <div className="picture">
+        {/* {writerIndex >= 9 && ( */}
+        <div className="image-container grow">
+          <img
+            className="image image-front"
+            src="https://felipevalentim.github.io/my-cv/me.jpg"
+          />
+
+          <FontAwesomeIcon
+            className="image image-back"
+            icon={faInstagram}
+            onClick={() =>
+              window.open("https://www.instagram.com/sahrutar/", "_blank")
+            }
+          />
+        </div>
+        {/* )} */}
       </div>
     </div>
   );
