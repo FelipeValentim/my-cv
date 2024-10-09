@@ -6,6 +6,8 @@ import {
   faInstagram,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+import Lottie from "lottie-react";
+import animation from "../animations/Animation.json";
 
 const Typewriter = ({ text, speed = 75, onComplete, last = false }) => {
   const [displayedText, setDisplayedText] = useState("");
@@ -140,6 +142,13 @@ const Home = () => {
           />
         </div>
         {/* )} */}
+      </div>
+      <div className="animation-container">
+        <Lottie
+          className="lottie-animation"
+          animationData={animation}
+          loop={true}
+        />
       </div>
     </div>
   );

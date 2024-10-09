@@ -3,6 +3,10 @@
   --white-color: #f5f7f8;
 }
 
+* {
+  color: var(--white-color);
+}
+
 .madimi-one-regular {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
@@ -13,7 +17,7 @@
   font-weight: bold;
 }
 
-.color-primary {
+.color-primary * {
   color: var(--primary-color);
 }
 
@@ -63,8 +67,7 @@
 .btn-secondary {
   background-color: #222831;
   border-radius: 0.5rem;
-  display: flex;
-  padding: 1rem;
+  padding: 1rem 1.2rem;
   transition: all ease-in-out 0.3s;
 }
 

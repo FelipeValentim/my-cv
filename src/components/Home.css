@@ -18,7 +18,6 @@
   width: max-content;
   gap: 1rem;
   position: relative;
-  color: var(--white-color);
 }
 
 .subtitle {
@@ -105,4 +104,13 @@
 
 .picture:has(.image-container:hover)::after {
   transform: rotate(180deg);
+}
+
+.animation-container {
+  grid-column: 1/-1;
+  height: 600px;
+}
+
+.animation-container .lottie-animation {
+  height: 100%;
 }

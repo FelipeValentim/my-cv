@@ -7,6 +7,7 @@ import { SnackBar } from "./SnackBar";
 import Header from "./components/Header";
 import BackgroundAnimation from "./components/BackgroundAnimation";
 import Home from "./components/Home";
+import Experience from "./components/Experience";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -47,6 +48,8 @@ function App() {
             <div className="fade">
               <Header />
               <Home />
+              <Experience />
+
               <SnackBar />
             </div>
           </div>
