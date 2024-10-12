@@ -34,8 +34,10 @@ const Experience = () => {
         <div className="timeline-container">
           <div className="timeline-row">
             <div className="timeline-item timeline-content left">
-              <div className="title">Ensino Médio</div>
-              <div className="subtitle">Ano de finalizacao do Ensino Médio</div>
+              <div className="title">Término do Ensino Médio</div>
+              <div className="subtitle">
+                Ano de finalizacao do Ensino Médio - Albert Sabin
+              </div>
               <div className="skills">Matemática, Física, Inglês</div>
             </div>
             <div className="timeline-item center">
@@ -51,8 +53,8 @@ const Experience = () => {
 
           <div className="timeline-row">
             <div className="timeline-item timeline-content right">
-              <div className="title">Início UERJ</div>
-              <div className="subtitle">Ciencia da Computacao</div>
+              <div className="title">Início da Faculdade</div>
+              <div className="subtitle">Ciencia da Computacao - UERJ</div>
               <div className="skills">
                 Métodos de Busca, Estrutura de Dados, Teste de Software
               </div>
@@ -70,10 +72,12 @@ const Experience = () => {
 
           <div className="timeline-row">
             <div className="timeline-item timeline-content left">
-              <div className="title">Início do estágio</div>
-              <div className="subtitle">Desenvolvedor FullStack</div>
+              <div className="title">Início do Estágio</div>
+              <div className="subtitle">
+                Desenvolvedor FullStack - Practice Software LTDA
+              </div>
               <div className="skills">
-                React, .NET, Javascript, JQuery, ASP.NET
+                React, .NET, Javascript, JQuery, ASP.NET, SQL Server
               </div>
             </div>
             <div className="timeline-item center">

@@ -15,6 +15,7 @@ const Header = () => {
         <span className="navigator">Início</span>
         <span className="navigator">Experiência</span>
         <span className="navigator">Habilidade</span>
+        <span className="navigator">Projetos</span>
         <span className="navigator">Contato</span>
       </nav>
     </header>
