@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Experience.css";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
 import {
   faBriefcase,
   faGraduationCap,
@@ -9,8 +8,10 @@ import { faBuilding } from "@fortawesome/free-regular-svg-icons";
 
 const Experience = () => {
   return (
-    <div className="experience-container">
-      {/* <div className="experience-timeline">
+    <section id="experience">
+      <div className="experience-container">
+        <h1 className="section-title">Minhas Experiencias</h1>
+        {/* <div className="experience-timeline">
         <div className="timeline-item left">
           <div className="timeline-content">
             <h3>Formatura do Ensino Médio</h3>
@@ -30,57 +31,64 @@ const Experience = () => {
           </div>
         </div>
       </div> */}
-      <div className="timeline-container">
-        <div className="timeline-row">
-          <div className="timeline-item left">
-            <div>Ensino Médio</div>
-            <div>Ano de finalizacao do Ensino Médio</div>
+        <div className="timeline-container">
+          <div className="timeline-row">
+            <div className="timeline-item timeline-content left">
+              <div className="title">Ensino Médio</div>
+              <div className="subtitle">Ano de finalizacao do Ensino Médio</div>
+              <div className="skills">Matemática, Física, Inglês</div>
+            </div>
+            <div className="timeline-item center">
+              <FontAwesomeIcon
+                icon={faGraduationCap}
+                className="timeline-center-icon"
+              />
+            </div>
+            <div className="timeline-item time right">
+              <div>2017</div>
+            </div>
           </div>
-          <div className="timeline-item center">
-            <FontAwesomeIcon
-              icon={faGraduationCap}
-              className="timeline-center-icon"
-            />
+
+          <div className="timeline-row">
+            <div className="timeline-item timeline-content right">
+              <div className="title">Início UERJ</div>
+              <div className="subtitle">Ciencia da Computacao</div>
+              <div className="skills">
+                Métodos de Busca, Estrutura de Dados, Teste de Software
+              </div>
+            </div>
+            <div className="timeline-item center">
+              <FontAwesomeIcon
+                icon={faBuilding}
+                className="timeline-center-icon"
+              />
+            </div>
+            <div className="timeline-item time left">
+              <div>2018</div>
+            </div>
           </div>
-          <div className="timeline-item right">
-            <div>2017</div>
+
+          <div className="timeline-row">
+            <div className="timeline-item timeline-content left">
+              <div className="title">Início do estágio</div>
+              <div className="subtitle">Desenvolvedor FullStack</div>
+              <div className="skills">
+                React, .NET, Javascript, JQuery, ASP.NET
+              </div>
+            </div>
+            <div className="timeline-item center">
+              <FontAwesomeIcon
+                icon={faBriefcase}
+                className="timeline-center-icon"
+              />
+            </div>
+            <div className="timeline-item time right">
+              <div>2022</div>
+            </div>
           </div>
         </div>
 
-        <div className="timeline-row">
-          <div className="timeline-item right">
-            <div>Inicio UERJ</div>
-            <div>Ano de INICIO do Ensino Médio</div>
-          </div>
-          <div className="timeline-item center">
-            <FontAwesomeIcon
-              icon={faBuilding}
-              className="timeline-center-icon"
-            />
-          </div>
-          <div className="timeline-item left">
-            <div>2018</div>
-          </div>
-        </div>
-
-        <div className="timeline-row">
-          <div className="timeline-item left">
-            <div>Inicio do estágio</div>
-            <div>Ano de INICIO do Ensino Médio</div>
-          </div>
-          <div className="timeline-item center">
-            <FontAwesomeIcon
-              icon={faBriefcase}
-              className="timeline-center-icon"
-            />
-          </div>
-          <div className="timeline-item right">
-            <div>2022</div>
-          </div>
-        </div>
-      </div>
-
-      {/* <ul className="timeline">
+        {/* <ul className="timeline">
         <li className="timeline-item" style={{ "--accent-color": "#41516C" }}>
           <div className="date">2017</div>
           <div className="title">Ensino Médio</div>
@@ -105,7 +113,8 @@ const Experience = () => {
           </div>
         </li>
       </ul> */}
-    </div>
+      </div>
+    </section>
   );
 };
 

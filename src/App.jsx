@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import BackgroundAnimation from "./components/BackgroundAnimation";
 import Home from "./components/Home";
 import Experience from "./components/Experience";
+import Skills from "./components/Skills";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -49,7 +50,7 @@ function App() {
               <Header />
               <Home />
               <Experience />
-
+              <Skills />
               <SnackBar />
             </div>
           </div>

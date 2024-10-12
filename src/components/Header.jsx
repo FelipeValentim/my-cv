@@ -12,10 +12,10 @@ const Header = () => {
         <img className="close-tag" src={closeTag} />
       </div>
       <nav className="navigation">
-        <span>Início</span>
-        <span>Experiência</span>
-        <span>Habilidade</span>
-        <span>Contato</span>
+        <span className="navigator">Início</span>
+        <span className="navigator">Experiência</span>
+        <span className="navigator">Habilidade</span>
+        <span className="navigator">Contato</span>
       </nav>
     </header>
   );

@@ -86,8 +86,8 @@
   transition: ease-in-out all 0.3s;
   background: conic-gradient(
     from 30deg,
-    #6be89b,
-    #0076a5 var(--distance),
+    var(--primary-color),
+    #fff var(--distance),
     transparent var(--distance)
   );
   -webkit-mask: radial-gradient(
