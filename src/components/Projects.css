@@ -4,6 +4,11 @@
   margin-bottom: 10rem;
 }
 
+.projects-container .projects-list {
+  display: flex;
+  gap: 2rem;
+}
+
 .projects-container .instagram-container {
   display: flex;
   flex-direction: column;
@@ -11,11 +16,45 @@
   /* transition: transform 0.1s ease-in-out; */
   transform-style: preserve-3d; /* Preserva a perspectiva 3D */
   perspective: 1000px; /* Para dar profundidade ao efeito */
+  position: relative;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects-container
+  :has(.instagram-container:hover)
+  .instagram-container:not(:hover) {
+  filter: blur(3px);
+}
+
+.projects-container .instagram-container::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 10px;
+  left: 10px;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--primary-color) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  transition: all 0.3s ease;
+}
+
+.projects-container .instagram-container:hover::before {
+  top: 20px;
+  left: 20px;
 }
 
 .projects-container :is(.instagram-header, .instagram-footer) {
   border: 1px solid #fff;
   padding: 1rem;
+  background-color: #151515;
 }
 
 .projects-container .instagram-header {
@@ -25,8 +64,8 @@
 .projects-container .instagram-body {
   border: 1px solid #fff;
   position: relative;
-  width: 330px;
-  height: 370px;
+  width: 100%;
+  height: 360px;
 }
 
 .projects-container .instagram-body .github {
@@ -65,11 +104,6 @@
 
 .projects-container .instagram-footer .tags span {
   color: var(--primary-color);
-}
-
-.projects-container .projects-list {
-  display: flex;
-  gap: 1rem;
 }
 
 .projects-container .instagram-header {

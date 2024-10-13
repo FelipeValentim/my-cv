@@ -10,6 +10,7 @@ import {
 import project3 from "../assets/project3.png";
 import project2 from "../assets/project2.png";
 import project1 from "../assets/project1.png";
+import { useEffect } from "react";
 
 const projectData = [
   {
@@ -18,7 +19,7 @@ const projectData = [
     profileName: "Felipe Valentim",
     githubUrl: "https://github.com/FelipeValentim/ac-fuzzy",
     projectImage: project1,
-    title: "Controle de Ar-Condicionado com Fuzzy",
+    title: "Controle de Ar-Condicionado Fuzzy",
     tags: ["react", "es6fuzzy", "chartjs"],
   },
   {
@@ -56,7 +57,6 @@ const Projects = () => {
 
         const rotateX = (y - rect.height / 2) * -0.1;
         const rotateY = (x - rect.width / 2) * 0.1;
-
         container.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)  scale3d(1, 1, 1)`;
       };
 
@@ -74,7 +74,7 @@ const Projects = () => {
       };
     });
   }, []);
-*/
+  */
 
   return (
     <section id="projects">
