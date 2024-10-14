@@ -39,6 +39,7 @@ const Experience = () => {
                 Ano de finalizacao do Ensino Médio - Albert Sabin
               </div>
               <div className="skills">Matemática, Física, Inglês</div>
+              <div className="content-time">2017</div>
             </div>
             <div className="timeline-item center">
               <FontAwesomeIcon
@@ -58,6 +59,7 @@ const Experience = () => {
               <div className="skills">
                 Métodos de Busca, Estrutura de Dados, Teste de Software
               </div>
+              <div className="content-time">2018</div>
             </div>
             <div className="timeline-item center">
               <FontAwesomeIcon
@@ -79,6 +81,7 @@ const Experience = () => {
               <div className="skills">
                 React, .NET, Javascript, JQuery, ASP.NET, SQL Server
               </div>
+              <div className="content-time">2022</div>
             </div>
             <div className="timeline-item center">
               <FontAwesomeIcon

@@ -47,13 +47,15 @@ function App() {
           <BackgroundAnimation />
 
           <div className="main-container">
+            <Header />
             <div className="fade">
-              {/* <Header /> */}
-              <Home />
-              {/* <Experience /> */}
-              {/* <Skills /> */}
-              {/* <Projects /> */}
-              {/* <SnackBar /> */}
+              <div className="content-container">
+                <Home />
+                <Experience />
+                {/* <Skills /> */}
+                {/* <Projects /> */}
+                {/* <SnackBar /> */}
+              </div>
             </div>
           </div>
         </>
