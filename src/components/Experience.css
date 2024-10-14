@@ -292,3 +292,25 @@
     border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }
 } */
+
+/* MOBILE */
+@media (max-width: 1030px) {
+  .timeline-container {
+  }
+  .timeline-row {
+    grid-template-columns: 50px 1fr auto;
+  }
+
+  .timeline-item.center {
+    grid-column: 1;
+  }
+
+  .timeline-row .timeline-content {
+    grid-column: 2;
+  }
+
+  .timeline-item.timeline-item.time.left,
+  .timeline-item.time.right {
+    grid-column: 3;
+  }
+}

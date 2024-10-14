@@ -48,12 +48,12 @@ function App() {
 
           <div className="main-container">
             <div className="fade">
-              <Header />
+              {/* <Header /> */}
               <Home />
-              <Experience />
-              <Skills />
-              <Projects />
-              <SnackBar />
+              {/* <Experience /> */}
+              {/* <Skills /> */}
+              {/* <Projects /> */}
+              {/* <SnackBar /> */}
             </div>
           </div>
         </>

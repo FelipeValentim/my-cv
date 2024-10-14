@@ -4,7 +4,7 @@
 }
 
 .home-container {
-  width: 1000px;
+  max-width: 1000px;
   margin: 2rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -113,4 +113,32 @@
 
 .animation-container .lottie-animation {
   height: 100%;
+  max-width: 100%;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .home-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .home-container .picture {
+    grid-row: 1;
+  }
+  .home-container .home {
+    grid-row: 2;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
 }

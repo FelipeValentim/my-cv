@@ -1,6 +1,14 @@
 :root {
   --primary-color: #f7ad01;
   --white-color: #f5f7f8;
+
+  /* Tamanhos para media queries */
+  --xs: 480px; /* telas muito pequenas, celulares pequenos */
+  --sm: 768px; /* tablets ou celulares maiores */
+  --md: 1030px; /* laptops pequenos ou tablets em landscape */
+  --lg: 1280px; /* laptops maiores e desktops */
+  --xl: 1440px; /* monitores grandes */
+  --xxl: 1920px; /* monitores muito grandes */
 }
 
 * {
