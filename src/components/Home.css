@@ -141,4 +141,8 @@
   .subtitle {
     font-size: 1.3rem;
   }
+
+  .animation-container {
+    height: 300px;
+  }
 }
