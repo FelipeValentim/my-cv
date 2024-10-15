@@ -10,7 +10,9 @@ import {
 import project3 from "../assets/project3.png";
 import project2 from "../assets/project2.png";
 import project1 from "../assets/project1.png";
-import { useEffect } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick"; // Importação do slider
 
 const projectData = [
   {
@@ -43,44 +45,38 @@ const projectData = [
 ];
 
 const Projects = () => {
-  /*
-  useEffect(() => {
-    const instagramContainers = document.querySelectorAll(
-      ".instagram-container"
-    );
-
-    instagramContainers.forEach((container) => {
-      const handleMouseMove = (e) => {
-        const rect = container.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const rotateX = (y - rect.height / 2) * -0.1;
-        const rotateY = (x - rect.width / 2) * 0.1;
-        container.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)  scale3d(1, 1, 1)`;
-      };
-
-      const handleMouseLeave = () => {
-        container.style.transform =
-          "rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
-      };
-
-      container.addEventListener("mousemove", handleMouseMove);
-      container.addEventListener("mouseleave", handleMouseLeave);
-
-      return () => {
-        container.removeEventListener("mousemove", handleMouseMove);
-        container.removeEventListener("mouseleave", handleMouseLeave);
-      };
-    });
-  }, []);
-  */
+  // Configuração para o slider
+  const settings = {
+    arrows: false,
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1030, // Quando a largura for menor que 1030px, use carousel
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768, // Para telas menores que 768px
+        settings: {
+          slidesToShow: 1, // Mostrar apenas 1 item
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <section id="projects">
       <div className="projects-container">
         <h1 className="section-title">Meus Projetos</h1>
-        <div className="projects-list">
+        {/* Adicionando o Slider */}
+        <Slider {...settings} className="projects-list">
           {projectData.map((project, index) => (
             <div className="instagram-container" key={index}>
               <div className="instagram-header">
@@ -129,7 +125,7 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </section>
   );

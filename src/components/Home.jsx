@@ -115,7 +115,17 @@ const Home = () => {
           <span className="social-media" title="Currículo">
             {writerIndex >= 9 && (
               <>
-                <span className="btn btn-primary grow">Baixar CV</span>
+                <span
+                  className="btn btn-primary grow"
+                  onClick={() =>
+                    window.open(
+                      "https://drive.usercontent.google.com/u/0/uc?id=1lVgBm80sTnW4R-DODmtW64FgwJCKhFkT&export=download",
+                      "_blank"
+                    )
+                  }
+                >
+                  Baixar CV
+                </span>
                 <span
                   className="btn btn-secondary grow"
                   title="LinkedIn"

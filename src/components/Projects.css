@@ -4,9 +4,8 @@
   margin-bottom: 10rem;
 }
 
-.projects-container .projects-list {
-  display: flex;
-  gap: 2rem;
+.projects-container .slick-slide {
+  padding: 0px 20px 20px 10px;
 }
 
 .projects-container .instagram-container {
@@ -125,4 +124,25 @@
 .projects-container .instagram-header .profile-image img {
   height: 100%;
   border-radius: 50%;
+}
+
+@media (max-width: 1030px) {
+  .projects-container {
+    width: 100%;
+  }
+
+  .instagram-container {
+    width: 334px !important;
+  }
+
+  .projects-container .slick-track .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .projects-container
+    :has(.instagram-container:hover)
+    .instagram-container:not(:hover) {
+    filter: none;
+  }
 }

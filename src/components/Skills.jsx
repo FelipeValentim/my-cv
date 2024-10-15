@@ -90,8 +90,6 @@ const Skills = () => {
                 >
                   <img
                     src={skillData[skillKey].icon}
-                    height="100"
-                    width="250"
                     alt={skillData[skillKey].name}
                   />
                 </div>
@@ -106,8 +104,6 @@ const Skills = () => {
                 >
                   <img
                     src={skillData[skillKey].icon}
-                    height="100"
-                    width="250"
                     alt={skillData[skillKey].name}
                   />
                 </div>

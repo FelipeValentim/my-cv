@@ -52,8 +52,8 @@ function App() {
               <div className="content-container">
                 <Home />
                 <Experience />
-                {/* <Skills /> */}
-                {/* <Projects /> */}
+                <Skills />
+                <Projects />
                 {/* <SnackBar /> */}
               </div>
             </div>
