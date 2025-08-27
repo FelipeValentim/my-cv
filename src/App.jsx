@@ -3,7 +3,6 @@ import "./Common.css";
 import { useLottie } from "lottie-react";
 import loading from "./loading.json";
 import React from "react";
-import { SnackBar } from "./SnackBar";
 import Header from "./components/Header";
 import BackgroundAnimation from "./components/BackgroundAnimation";
 import Home from "./components/Home";
@@ -25,18 +24,6 @@ function App() {
 
     return <div className="loading">{View}</div>;
   };
-
-  const [isMobile, setIsMobile] = React.useState(false);
-
-  //choose the screen size
-  const handleResize = () => {
-    setIsMobile(window.innerWidth < 1468);
-  };
-
-  React.useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-  }, []);
 
   return (
     <>
