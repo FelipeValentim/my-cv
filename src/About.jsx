@@ -40,7 +40,7 @@ const About = () => {
           className="download-cv"
           onClick={() =>
             window.open(
-              "https://drive.usercontent.google.com/u/0/uc?id=1lVgBm80sTnW4R-DODmtW64FgwJCKhFkT&export=download",
+              "https://drive.google.com/file/d/1n49vyFV_-YoNDn6ZXEw8EQNHO9AnkUYx/view?usp=sharing",
               "_blank"
             )
           }
